@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'verify.email' => \App\Http\Middleware\VerifyEmailMiddleware::class,
         'last.session' => \App\Http\Middleware\LastSessionMiddleware::class,
         'origin.session' => \App\Http\Middleware\OriginSessionMiddleware::class,
+        'two.factor' => \App\Http\Middleware\TwoFactorMiddleware::class,
     ];
 }

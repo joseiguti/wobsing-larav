@@ -32,3 +32,11 @@ Route::middleware('last.session')->group(function () {
 Route::middleware('origin.session')->group(function () {
     // Aquí van las rutas protegidas que requieren almacenar la cookie de origen de sesión
 });
+
+Route::middleware('two.factor')->group(function () {
+    // Aquí van las rutas protegidas que requieren autenticación por Two Factor
+});
+
+Route::get('/sesion-expirada', function () {
+    return view('sesion-expirada');
+});

@@ -28,3 +28,7 @@ Route::get('/sesiones', function () {
 Route::middleware('last.session')->group(function () {
     // Aquí van las rutas protegidas que requieren verificación de última sesión
 });
+
+Route::middleware('origin.session')->group(function () {
+    // Aquí van las rutas protegidas que requieren almacenar la cookie de origen de sesión
+});

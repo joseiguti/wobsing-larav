@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/verificacion', function () {
     return view('verificacion');
 });
+
+Route::get('/sesiones', function () {
+    return view('sesiones');
+});
+
+Route::middleware('last.session')->group(function () {
+    // Aquí van las rutas protegidas que requieren verificación de última sesión
+});
